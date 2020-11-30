@@ -1,0 +1,154 @@
+:root {
+  --color-beige: #ffede5;
+   --color-flower-one: #ffede5;
+   --color-flower-two: #ffede5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  background: var(--color-beige);
+}
+
+
+
+.grid {
+  padding: 20px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.border-box {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border: 149px dotted;
+  position: relative;
+  z-index: 4;
+}
+
+.border-dots {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border: 149px dotted;
+  position: absolute;
+   top: -150px;
+  right: -150px;
+  z-index: 4;
+}
+
+.border-box .turned {
+  transform: rotate(45deg);
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  border: 70px dotted;
+  z-index: -2;
+}
+
+.background-flower {
+  height: 600px;
+  width: 600px;
+  border: 299px dotted var(--color-flower-one);
+  position: absolute;
+  z-index: -10;
+  transform: rotate(45deg);
+  top: -300px;
+  right: -300px;
+   transition: border-color 2s cubic-bezier(.29, 1.01, 1, -0.68);
+}
+.background-flower-two {
+  height: 900px;
+  width: 900px;
+  border: 449px dotted var(--color-flower-two);
+  position: absolute;
+  z-index: -10;
+  transform: rotate(90deg);
+  top: -450px;
+  right: -450px;
+  transition: border-color 2s cubic-bezier(.29, 1.01, 1, -0.68) 1s;
+}
+
+.container {
+  background: var(--color-beige);
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  width: 150px;
+  height: 150px;
+  z-index: 5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+
+.container p {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 32px;
+  padding: 20px;
+  pointer-events: none;
+}
+
+#one {
+  grid-area: 2 / 3;
+}
+
+#one:hover {
+--color-flower-one: #a7292d;
+--color-flower-two: #e8aa0b;
+}
+
+#two {
+  grid-area: 1 / 4;
+}
+
+
+
+
+#three {
+  grid-area: 3 / 4;
+}
+
+#four {
+  grid-area: 5 / 3;
+}
+
+#five {
+  grid-area: 6 / 4;
+}
+
+#five:hover {
+--color-flower-one: #a7292d;
+--color-flower-two: #e8aa0b;
+}
